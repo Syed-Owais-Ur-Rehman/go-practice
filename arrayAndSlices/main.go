@@ -7,6 +7,7 @@ import (
 
 func main() {
 	fmt.Println("We are doing arrays and slices")
+
 	// Arrays
 	var fruitList [4]string
 	fmt.Println("Orignal Fruit List: ", fruitList, "Length of List is: ", len(fruitList))
@@ -43,8 +44,19 @@ func main() {
 	fmt.Println("highScore Slice now is: ", highScore)
 
 	// Sorting
-	sort.IntsAreSorted(highScore)
+	fmt.Println("Sorted: ", sort.IntsAreSorted(highScore))
 	sort.Ints(highScore) // sort imported
-	sort.IntsAreSorted(highScore)
+	fmt.Println("Sorted: ", sort.IntsAreSorted(highScore))
+
+	// Remove Value from Slice based on Index
+	var courses = []string{"react", "js", "python", "swift"}
+	var index int = 2
+
+	fmt.Println("courses: ", courses)
+
+	// courses = append(courses[:index], courses[index+1:])
+	courses = append(courses[:index], courses[index+1:]...)
+
+	fmt.Println("courses: ", courses)
 
 }
