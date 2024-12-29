@@ -8,8 +8,6 @@ import (
 var b float32 = 3.4
 var c, d int = 1, 7
 
-const NewVariable string = "This is a Public variable" // Public variable as it starts with a capital
-
 func main() {
 
 	var (
@@ -55,5 +53,4 @@ func main() {
 
 	fmt.Println("Constant Values", a2, PI, A, B, C)
 
-	types()
 }

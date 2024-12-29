@@ -2,7 +2,9 @@ package main
 
 import "fmt"
 
-func types() {
+const NewVariable string = "This is a Public variable" // Public variable as it starts with a capital
+
+func main() {
 	var name string
 	fmt.Printf("hello '%s' world '%s' \n", name, NewVariable)
 
