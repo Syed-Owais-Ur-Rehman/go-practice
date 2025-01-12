@@ -81,5 +81,91 @@ func main() {
 	}
 
 	// Loops
+	days := []string{"Sun", "Tues", "Wed", "Fri", "Sat"}
 
+	for d := 0; d < len(days); d++ { // This loop won't be used much
+		fmt.Println("Day:", days[d])
+	}
+
+	for i := range days { // easier loop method
+		fmt.Println("Day is:", days[i]) // i here does not have value but has index
+	}
+
+	for index, day := range days {
+		fmt.Printf("index is %v and value is %v \n", index, day)
+	}
+
+	for _, day := range days {
+		fmt.Printf("index is and value is %v \n", day)
+	}
+
+	// Equivalent to while loop
+
+	rogueValue := 1
+
+	// Style 1 : Normal
+	for rogueValue < 10 {
+		fmt.Println("Value: ", rogueValue)
+		rogueValue++
+	}
+
+	rogueValue = 1
+
+	// Style 2 : Using Break
+	for rogueValue < 10 {
+
+		if rogueValue == 5 {
+			break
+		}
+
+		fmt.Println("Loop with Beak, Value: ", rogueValue)
+		rogueValue++
+	}
+
+	rogueValue = 1
+
+	// Style 3 : Using Continue without Increment
+	for rogueValue < 10 {
+
+		if rogueValue == 5 {
+			rogueValue++ // <----- if this is commented then value of rogueValue as 5 will continue to be traversed infinitely.
+			continue
+		}
+
+		fmt.Println("Loop with Continue and without increment, Value: ", rogueValue)
+		rogueValue++
+
+	}
+
+	rogueValue = 1
+
+	// Style 4 : Using Continue with Increment
+	for rogueValue < 10 {
+
+		if rogueValue == 5 {
+			rogueValue++
+			continue
+		}
+
+		fmt.Println("Loop with Continue and Increment, Value: ", rogueValue)
+		rogueValue++
+
+	}
+
+	rogueValue = 1
+
+	// Style 5 : Using label with loop
+	for rogueValue < 10 {
+
+		if rogueValue == 2 {
+			goto lco
+		}
+
+		fmt.Println("Loop with Label, Value: ", rogueValue)
+		rogueValue++
+
+	}
+
+lco:
+	fmt.Println("Jumping to Code")
 }
