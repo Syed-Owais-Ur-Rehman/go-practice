@@ -76,6 +76,7 @@ func DecodeJson() {
 
 	// Some case where you just want to add data to key value pair
 	var myOnlineData map[string]interface{} // interface used here coz we don't know input data.
+	// Here we are telling Go that keys will be in string and value typein not known so interface{} is used.
 
 	json.Unmarshal(jsonDataFromWeb, &myOnlineData)
 
